@@ -67,7 +67,7 @@ object HomeAndPatcherMessages {
     /**
      * Witty greeting message.
      */
-    fun getHomeMessage(context: Context): Int {
+    fun getHomeMessage(context: Context disableDynamic: Boolean): Int {
         // First message is always shown as the first message for installations,
         // and all other strings are randomly shown.
         // Use different seed on each install, but keep the same seed across sessions
@@ -93,6 +93,9 @@ object HomeAndPatcherMessages {
             )
             homeGreetingMessage = message
         }
+        if (disableDynamic) {
+            return R.string.home_greeting_static
+        }
 
         return message
     }
@@ -100,7 +103,12 @@ object HomeAndPatcherMessages {
     /**
      * Witty patcher message.
      */
-    fun getPatcherMessage(context: Context): Int {
+    fun getPatcherMessage(context: Context disabledDynamic: Boolean): Int {
+        
+        if (disableDynamic) {
+            return R.string.home_greeting_static
+        }
+        
         // Message changes each time called.
         return updateValues(
             context,

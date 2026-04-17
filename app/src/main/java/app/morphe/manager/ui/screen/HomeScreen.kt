@@ -47,6 +47,7 @@ fun HomeScreen(
     onPatchTriggerHandled: () -> Unit = {}
 ) {
     val context = LocalContext.current
+    val disableDynamicMessages by prefs.disableDynamicMessages.getAsState()
     val view = LocalView.current
 
     // Dialog states
@@ -57,13 +58,12 @@ fun HomeScreen(
     val isRefreshing by homeViewModel.isRefreshing.collectAsStateWithLifecycle()
 
     // Get greeting message
-    var greetingMessage by remember { mutableStateOf(context.getString(HomeAndPatcherMessages.getHomeMessage(context))) }
+   val greetingMessage = context.getString(HomeAndPatcherMessages.getHomeMessage(context, disableDynamicMessages))
 
     // Handle refresh with haptic feedback
     val onRefresh: () -> Unit = {
         view.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS)
         HomeAndPatcherMessages.resetHomeMessage()
-        greetingMessage = context.getString(HomeAndPatcherMessages.getHomeMessage(context))
         homeViewModel.refresh()
     }
 

@@ -50,18 +50,22 @@ fun SimplePatchingInProgress(
     val windowSize = rememberWindowSize()
     val (completed, total) = patchesProgress
     val context = LocalContext.current
+    val prefs: PreferencesManager = koinInject()
+    val disableDynamicMessages by prefs.disableDynamicMessages.getAsState()
 
-    var currentMessage by remember {
+    var currentMessage by remember(disableDynamicMessages) {
         mutableIntStateOf(
-            HomeAndPatcherMessages.getPatcherMessage(context)
+            HomeAndPatcherMessages.getPatcherMessage(context, disableDynamicMessages)
         )
     }
 
     // Rotate messages every 10 seconds
-    LaunchedEffect(Unit) {
-        while (true) {
-            delay(10000)
-            currentMessage = HomeAndPatcherMessages.getPatcherMessage(context)
+    LaunchedEffect(disableDynamicMessages) {
+        if (!disableDynamicMessages) {
+            while (true) {
+                delay(10000)
+                currentMessage = HomeAndPatcherMessages.getPatcherMessage(context, false)
+            }
         }
     }
 

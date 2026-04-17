@@ -425,7 +425,7 @@ En iyi sonuçlar için bu uygulama, &lt;b&gt;tam APK&lt;/b&gt; dosyasını yamal
     <string name="settings_advanced_patch_options_loading">Yama seçenekleri yükleniyor...</string>
     <string name="settings_advanced_patch_options_waiting_for_source">Yama kaynağı güncellenene kadar bekleyin</string>
     <string name="settings_advanced_patch_options_load_error">Yama seçenekleri yüklenemedi</string>
-    <string name="settings_advanced_patch_options_no_available">Bu yamaya ait seçenekler bulunmuyor</string>
+    <string name="settings_advanced_patch_options_no_available">Bu yamaya ait hiçbir seçenek yok</string>
     <!-- Settings - Advanced Tab - Patch Options Section: Custom Branding -->
     <string name="settings_advanced_patch_options_custom_branding">Özel marka</string>
     <string name="settings_advanced_patch_options_custom_branding_description">Görüntülenen uygulama adını değiştir</string>

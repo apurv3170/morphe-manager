@@ -487,7 +487,7 @@ morphe_header_custom_dark.png
     <!-- Settings - Advanced Tab - Patch Options Section: Hide Shorts -->
     <string name="settings_advanced_patch_options_hide_shorts_features">Приховати функціонал Shorts</string>
     <string name="settings_advanced_patch_options_hide_shorts_app_shortcut">Приховати ярлик Shorts</string>
-    <string name="settings_advanced_patch_options_hide_shorts_app_shortcut_description">Прибрати Shorts з меню довгого натискання у лаунчері</string>
+    <string name="settings_advanced_patch_options_hide_shorts_app_shortcut_description">Прибрати Shorts з меню тривалого натискання у лаунчері</string>
     <string name="settings_advanced_patch_options_hide_shorts_widget">Приховати віджет Shorts</string>
     <string name="settings_advanced_patch_options_hide_shorts_widget_description">Прибрати кнопку Shorts з віджета лаунчера</string>
     <!-- Settings - System Tab - Installer Section -->

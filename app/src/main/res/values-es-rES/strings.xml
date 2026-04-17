@@ -39,7 +39,7 @@
     <!-- "Buckle up" referring to fastening your vehicle seat belt. A light-hearted joke to build excitement -->
     <string name="home_greeting_3">Abróchate el cinturón, es hora de parchear</string>
     <!-- Sarcastic joke about blocking ads, intentionally over-the-top -->
-    <string name="home_greeting_4">Otro día, otra obra maestra bloqueada por anuncios</string>
+    <string name="home_greeting_4">Otro día, otra obra maestra con anuncios bloqueados</string>
     <!-- "Watch ads" refers to watching video ads in unpatched apps -->
     <string name="home_greeting_5">¿Quieres ver anuncios? Yo tampoco</string>
     <!-- Friendly, slightly mischievous joke about controlling app behavior -->
